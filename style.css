@@ -1,0 +1,266 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #DCCBB5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body .container-of-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 90%;
+}
+body .container-of-all .content{
+    background-color: #f7b733;
+    width: 50%;
+    height: 100%;
+    box-shadow: 4px -4px 30px -2px #444;
+    z-index: 2;
+    padding: 3.5%;
+    
+
+}
+.container-of-all .content > div:first-of-type h1{
+    font-size: 30px;
+    font-weight:bold;
+    color:#333;
+
+}
+.container-of-all .content > div:first-of-type p{
+    font-size:20px;
+    color:#444;
+    
+}
+.container-of-all .content > div:first-of-type span{
+    margin-left: 15px;
+    display: inline-block;
+    width: 55px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: lighter;
+    background-color: #2175f5;
+    border-radius: 6.5px;
+    text-transform: uppercase;
+    transition: .4s all linear;
+}
+.container-of-all .content hr{
+    background: none;
+    border: none;
+    height: 1px;
+    background-color: #dadada;
+    margin: 2% 0;
+}
+.container-of-all .content > div:nth-of-type(2) h3,
+.container-of-all .content > div:nth-of-type(3) h3,
+.container-of-all .content > div:nth-of-type(4) h3{
+    font-size:20px;
+    color:#333;
+    margin-bottom: 2%;
+}
+.container-of-all .content > div:nth-of-type(2) p{
+    font-size:17px;
+    color:#444;
+}
+
+
+.container-of-all .content > div:nth-of-type(3) > div{
+    display: flex;
+    
+}
+.container-of-all .content > div:nth-of-type(3) > div span{
+    display: block;
+    width: 27px;
+    height: 27px;
+    background-color: var(--theColorOfBg);
+    margin: 3%;
+    border-radius: 50%;
+    border: 4px solid var(--theColorOfBorder);
+    cursor: pointer;
+}
+
+.container-of-all .content > div:nth-of-type(3) > div span:first-of-type{
+    --theColorOfBg:#2175f5;
+    --theColorOfBorder:#2175f5;
+}
+.container-of-all .content > div:nth-of-type(3) > div span:nth-of-type(2){
+    --theColorOfBg:#f84848;
+    --theColorOfBorder:#f84848;
+}
+.container-of-all .content > div:nth-of-type(3) > div span:nth-of-type(3){
+    --theColorOfBg:#29b864;
+    --theColorOfBorder:#29b864;
+}
+.container-of-all .content > div:nth-of-type(3) > div span:nth-of-type(4){
+    --theColorOfBg:#ff5521;
+    --theColorOfBorder:#ff5521;
+}
+.container-of-all .content > div:nth-of-type(3) > div span:nth-of-type(5){
+    --theColorOfBg:#444;
+    --theColorOfBorder:#444;
+}
+.container-of-all .content > div:nth-of-type(3) > div span.active{
+    --theColorOfBorder:#fff;
+}
+.container-of-all .content > div:nth-of-type(4) > div span{
+    display: inline-flex;
+    width:40px;
+    height: 40px;
+    background-color: #eee;
+    margin: 1.5%;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 28px;
+    justify-content: center;
+    align-items: center;
+    transition: .4s all linear;
+}
+.container-of-all .content > div:nth-of-type(4) > div span.active{
+    background-color: var(--theNewColor);
+    color: #fff;
+}
+.container-of-all .content > div:nth-of-type(4) > div span.active.active-0{
+    --theNewColor : #2175f5;
+}
+.container-of-all .content > div:nth-of-type(4) > div span.active.active-1{
+    --theNewColor : #f84848;
+}
+.container-of-all .content > div:nth-of-type(4) > div span.active.active-2{
+    --theNewColor : #29b864;
+}
+.container-of-all .content > div:nth-of-type(4) > div span.active.active-3{
+    --theNewColor : #ff5521;
+}
+.container-of-all .content > div:nth-of-type(4) > div span.active.active-4{
+    --theNewColor : #444;
+}
+.container-of-all .content > div:nth-of-type(5){
+    margin-top: 15px;
+}
+.container-of-all .content > div:nth-of-type(5) button{
+    background: #2175f5;
+    color: #fff;
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    padding:14px 17px;
+    transition: .4s all linear;
+
+}
+.container-of-all .content > div:nth-of-type(5) h4{
+    display: inline-block;
+    margin-left: 23%;
+    font-size: 27px;
+    
+}
+.container-of-all .slider-container{
+    width: 50%;
+    height: 90%;
+    background-color: blue;
+    box-shadow: -4px -4px 30px -2px #444;
+    position: relative;
+    direction: rtl;
+}
+.container-of-all .slider-container .slider-fixed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.container-of-all .slider-container .slider-fixed > img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+.container-of-all .slider-container .slider-fixed > div{
+    position: relative;
+    transform: rotate(-25deg);
+    width: 145%;
+    height: 72%;
+    top: 22%;
+    left: -3%;
+    z-index: 10;
+}
+.container-of-all .slider-container .slider-fixed > div img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s all linear;
+}
+.container-of-all .slider-container .slider-fixed > div img.active{
+    opacity: 1;
+}
+.container-of-all .slider-container .slider-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+.container-of-all .slider-container .slider-content .slider-items{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    
+}
+
+.container-of-all .slider-container .slider-content .slider-items > div.slider-item{
+    transition: .5s all linear;
+    transform: translateX(0px);
+    width:25%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    
+}
+.container-of-all .slider-container .slider-content .slider-items > div.slider-item.theSecondCall{
+    left: 0;
+}
+.container-of-all .slider-container .slider-content .slider-items > div.absolute.slider-item{
+    left: -100%;
+}
+
+
+.container-of-all .slider-container .slider-content .slider-items > div:nth-of-type(1){
+    background: linear-gradient(45deg, #0136af, #22abfa);
+}
+
+/* .container-of-all .slider-container .slider-content > div:nth-last-of-type(7){
+    background: linear-gradient(45deg, #111, #666);
+
+}
+ .container-of-all .slider-container .slider-content > div:nth-last-of-type(6){
+    background: linear-gradient(45deg, #0136af, #22abfa);
+}
+.container-of-all .slider-container .slider-content > div:nth-last-of-type(5){
+    background: linear-gradient(45deg, #d62926, #ee625f);
+}
+.container-of-all .slider-container .slider-content > div:nth-last-of-type(4){
+    background: linear-gradient(45deg, #11998e, #1ce669);
+}
+.container-of-all .slider-container .slider-content > div:nth-last-of-type(3){
+    background: linear-gradient(45deg, #fc4a1a, #f7b733);
+} */
