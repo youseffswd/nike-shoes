@@ -9,7 +9,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    overflow: hidden;
+    
     height: 100vh;
     font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -17,38 +19,42 @@ body .container-of-all{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65%;
+/*    width: 65%;*/
+    width: 80%;
     height: 90%;
+    flex-wrap: wrap;
 }
 body .container-of-all .content{
     background-color: #f7b733;
-    width: 50%;
-    height: 100%;
+/*    width: 50%;*/
+    width:100%;
     box-shadow: 4px -4px 30px -2px #444;
     z-index: 2;
-    padding: 3.5%;
+    padding: 10px;
     
 
 }
 .container-of-all .content > div:first-of-type h1{
-    font-size: 30px;
-    font-weight:bold;
-    color:#333;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    margin-bottom:10px;
 
 }
 .container-of-all .content > div:first-of-type p{
-    font-size:20px;
+    font-size:14px;
     color:#444;
     
 }
 .container-of-all .content > div:first-of-type span{
-    margin-left: 15px;
-    display: inline-block;
-    width: 55px;
-    height: 35px;
-    line-height: 33px;
+    margin-left: auto;
+    display: block;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     color: #fff;
     font-weight: lighter;
     background-color: #2175f5;
@@ -60,19 +66,21 @@ body .container-of-all .content{
     background: none;
     border: none;
     height: 1px;
-    background-color: #dadada;
-    margin: 2% 0;
+    background-color: #ccc;
+    margin: 10px 0;
 }
 .container-of-all .content > div:nth-of-type(2) h3,
 .container-of-all .content > div:nth-of-type(3) h3,
 .container-of-all .content > div:nth-of-type(4) h3{
-    font-size:20px;
+    font-size:17px;
     color:#333;
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
 .container-of-all .content > div:nth-of-type(2) p{
-    font-size:17px;
+    font-size:14px;
+    line-height:1.5;
     color:#444;
+    padding-right: 20%;
 }
 
 
@@ -82,10 +90,10 @@ body .container-of-all .content{
 }
 .container-of-all .content > div:nth-of-type(3) > div span{
     display: block;
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
     background-color: var(--theColorOfBg);
-    margin: 3%;
+    margin: 0 10px;
     border-radius: 50%;
     border: 4px solid var(--theColorOfBorder);
     cursor: pointer;
@@ -116,12 +124,12 @@ body .container-of-all .content{
 }
 .container-of-all .content > div:nth-of-type(4) > div span{
     display: inline-flex;
-    width:40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: #eee;
-    margin: 1.5%;
+    margin: 0 5px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
     line-height: 28px;
@@ -149,28 +157,29 @@ body .container-of-all .content{
     --theNewColor : #444;
 }
 .container-of-all .content > div:nth-of-type(5){
+    display: flex;
+    align-items: center;
     margin-top: 15px;
 }
 .container-of-all .content > div:nth-of-type(5) button{
     background: #2175f5;
     color: #fff;
-    font-size:16px;
+    font-size:12px;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    padding:14px 17px;
+    padding:12px 15px;
     transition: .4s all linear;
 
 }
 .container-of-all .content > div:nth-of-type(5) h4{
-    display: inline-block;
-    margin-left: 23%;
-    font-size: 27px;
+    margin-left: auto;
+    font-size: 22px;
     
 }
 .container-of-all .slider-container{
-    width: 50%;
-    height: 90%;
+    width: 100%;
+    height: 40%;
     background-color: blue;
     box-shadow: -4px -4px 30px -2px #444;
     position: relative;
@@ -201,11 +210,10 @@ body .container-of-all .content{
     z-index: 10;
 }
 .container-of-all .slider-container .slider-fixed > div img{
-    width: 100%;
-    height: 100%;
+    width: 60%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 4%;
+    left: 33%;
     opacity: 0;
     transition: .5s all linear;
 }
@@ -247,20 +255,63 @@ body .container-of-all .content{
 .container-of-all .slider-container .slider-content .slider-items > div:nth-of-type(1){
     background: linear-gradient(45deg, #0136af, #22abfa);
 }
+@media (min-width:576px){
+    .container-of-all .slider-container .slider-fixed > div{
+        transform: rotate(-15deg);
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+    .container-of-all .slider-container .slider-fixed > div img{
+            width: 65%;
+            top: 0px;
+            left: 5%;
+    }
+}
+@media (min-width:768px){
+    
+    .container-of-all .slider-container .slider-fixed > div img{
+        width: 55%;
+        top: -15px;
+        left: 8%;
+    }
+}
+@media (min-width:992px){
+    body .container-of-all{
+        flex-wrap: nowrap;
+    }
+    body .container-of-all .content{
+        width: 50%;
+        padding:25px;
+    }
+    .container-of-all .slider-container{
+        width:50%;
+        height:60%;
+    }
+    .container-of-all .slider-container .slider-fixed > div img {
+        width: 110%;
+        top: -25px;
+        left: -39%;
+    }
+    
+}
 
-/* .container-of-all .slider-container .slider-content > div:nth-last-of-type(7){
-    background: linear-gradient(45deg, #111, #666);
 
-}
- .container-of-all .slider-container .slider-content > div:nth-last-of-type(6){
-    background: linear-gradient(45deg, #0136af, #22abfa);
-}
-.container-of-all .slider-container .slider-content > div:nth-last-of-type(5){
-    background: linear-gradient(45deg, #d62926, #ee625f);
-}
-.container-of-all .slider-container .slider-content > div:nth-last-of-type(4){
-    background: linear-gradient(45deg, #11998e, #1ce669);
-}
-.container-of-all .slider-container .slider-content > div:nth-last-of-type(3){
-    background: linear-gradient(45deg, #fc4a1a, #f7b733);
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
